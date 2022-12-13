@@ -1,4 +1,6 @@
 # import the streamlit library
 import streamlit as st
+import os
+ROOT_DIR = os.path.abspath(os.curdir)
 
-st.title("sandhya Banking App")
+print(ROOT_DIR)

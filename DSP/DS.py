@@ -4,14 +4,17 @@ from pathlib import Path
 
 import streamlit as st
 from PIL import Image
+import os
+ROOT_DIR = os.path.abspath(os.curdir)
 
+print(ROOT_DIR)
 st.title("The Banking Cibil App")
 
 # image = Image.open('C:\\Users\\vella\\PycharmProjects\\DS\\unsplash.jpg')
 #
 # st.image(image, caption='Sunrise by the mountains')
 
-video_file = open('C:\\Users\\vella\\PycharmProjects\\DS\\bank.mp4', 'rb')
+video_file = open('ROOT_DIR\\bank.mp4', 'rb')
 video_bytes = video_file.read()
 
 st.video(video_bytes)
