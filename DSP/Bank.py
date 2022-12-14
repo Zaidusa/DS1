@@ -1,11 +1,9 @@
 # import the streamlit library
 import streamlit as st
-import os
-ROOT_DIR = os.path.abspath(os.curdir)
+from PIL import Image
 
-print("root is",ROOT_DIR)
-
-video_file = open('Bank.mp4', 'rb')
-video_bytes = video_file.read()
-
-st.video(video_bytes)
+image = Image.open('TSPSC.png')
+st.image(image, caption='Sunrise by the mountains')
+st.header("TSPSC Group 1 Results")
+st.subheader("TSPSC Group 1 Results soon in december")
+st.text("TSPSC RESULTS WILL BE SOON PUBLISHED in below Link {}".format("https://www.tspsc.gov.in/"))
