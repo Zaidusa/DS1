@@ -7,10 +7,10 @@ from PIL import Image
 import os
 ROOT_DIR = os.path.abspath(os.curdir)
 
-st.title("The Banking Cibil App")
+st.title("CIBIL-The higher your score the better are your chances of getting a loan")
 
-image = Image.open('unsplash.jpg')
-st.image(image, caption='Sunrise by the mountains')
+image = Image.open('Cibil-Score.jpg')
+st.image(image, caption='Know your CIBIL- The higher your score the better are your chances of getting a loan')
 
 # video_file = open('Bank.mp4', 'rb')
 # video_bytes = video_file.read()
@@ -33,7 +33,7 @@ if( Gender== 'Male'):
 	malesal = st.number_input('sal in between 50 to 100 thousand')
 
 	try:
-		avgsal = (malesal / (12))
+		avgsal = ((malesal / (12))*100)
 	except:
 		st.text("Enter sal greater than 10000")
 
@@ -42,7 +42,7 @@ elif(Gender == 'Female'):
 	femalesal = st.number_input('eneter sal of both husband and wife')
 
 	try:
-		avgsal = (femalesal / (12))
+		avgsal = ((femalesal / (12))*100)
 	except:
 		st.text("Enter sal greater than 10000")
 else:
@@ -55,11 +55,11 @@ if(st.button('Calculate Cibil')):
 	st.text("Your avg sal is {}.".format(avgsal))
 
 	# give the interpretation of BMI index
-	if(avgsal < 3):
+	if(avgsal <= 550):
 		st.error("You are Extremely uneleigible")
-	elif(avgsal >= 3 and avgsal < 6):
+	elif(avgsal > 550 and avgsal <= 650):
 		st.warning("You need to improve cibil ")
-	elif(avgsal >=6  and avgsal < 100):
+	elif(avgsal >=650  and avgsal < 1000):
 		st.success("you are eligible")
 	else:
 		st.text("no proper information")
