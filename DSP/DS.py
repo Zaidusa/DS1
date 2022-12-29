@@ -42,7 +42,7 @@ elif(Gender == 'Female'):
 	femalesal = st.number_input('eneter sal of both husband and wife')
 
 	try:
-		avgsal = ((femalesal / (12))*100)
+		avgsal = ((femalesal / (10))*100)
 	except:
 		st.text("Enter sal greater than 10000")
 else:
